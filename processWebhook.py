@@ -1,6 +1,4 @@
 from flask import Flask, request, jsonify
-from threading import Thread
-
 from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
