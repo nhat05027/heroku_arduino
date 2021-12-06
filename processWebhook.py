@@ -5,7 +5,7 @@ from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
 
-app = Flask('')
+app = Flask('__name__')
 
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
 parameters = {
@@ -50,4 +50,7 @@ def pass_cap():
 @app.route('/')
 def home():
     return "COIN ARDUINO"
-app.run()
+
+if __name__ == "__main__":
+  app.debug = True
+  app.run()
